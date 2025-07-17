@@ -1,0 +1,13 @@
+[90m= [39m[34;4mApp\Models\SousCategorieExpertise[39;24m {#5172
+    [34mid[39m: [35m2[39m,
+    [34mcategorie_expertise_id[39m: [35m1[39m,
+    [34mnom[39m: "[32mRénovation[39m",
+    [34mslug[39m: "[32mrenovation[39m",
+    [34mdescription[39m: [36mnull[39m,
+    [34micon[39m: [36mnull[39m,
+    [34mordre[39m: [35m2[39m,
+    [34mis_active[39m: [35m1[39m,
+    [34mcreated_at[39m: "[32m2025-06-12 09:58:32[39m",
+    [34mupdated_at[39m: "[32m2025-06-12 09:58:32[39m",
+  }
+

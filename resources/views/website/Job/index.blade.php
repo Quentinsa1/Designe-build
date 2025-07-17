@@ -3,10 +3,10 @@
     <!-- Contenu -->
     <div class="page-content bg-white">
         <!-- Bannière intérieure -->
-        <div class="dez-bnr-inr overlay-black-middle" style="background-image:url(images/background/bg4.jpg);">
+        <div class="dez-bnr-inr overlay-black-middle" style="background-image:url({{ asset('assets/images/background/b2.jpg') }});">
             <div class="container">
                 <div class="dez-bnr-inr-entry">
-                    <h1 class="text-white">Nos Offres</h1>
+                    <h1 class="text-white"  style="text-align: center">Nos Offres</h1>
                 </div>
             </div>
         </div>
@@ -76,38 +76,6 @@
                     </div>
                     <!-- Fin de la partie gauche -->
 
-                    <!-- Partie droite -->
-                    <div class="col-lg-3 col-md-4">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-6">
-                                <div class="icon-bx-wraper bx-style-1 p-a30 center m-b15">
-                                    <div class="icon-bx-sm text-primary bg-white radius border-2 m-b20"> <a href="javascript:void(0);" class="icon-cell"><i class="fa fa-user"></i></a> </div>
-                                    <div class="icon-content">
-                                        <h5 class="dez-tilte text-uppercase">À la Une</h5>
-                                        <p>Découvrez nos dernières actualités et réalisations marquantes [...]</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-6">
-                                <div class="icon-bx-wraper bx-style-1 p-a30 center m-b15">
-                                    <div class="icon-bx-sm text-primary bg-white radius border-2 m-b20"> <a href="javascript:void(0);" class="icon-cell"><i class="far fa-building"></i></a> </div>
-                                    <div class="icon-content">
-                                        <h5 class="dez-tilte text-uppercase">Nos Valeurs</h5>
-                                        <p>Innovation, excellence et esprit d'équipe sont au cœur de notre ADN [...]</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                <div class="icon-bx-wraper bx-style-1 p-a20 left">
-                                    <div class="icon-bx-xs text-primary bg-white radius border-2 "> <a href="javascript:void(0);" class="icon-cell"><i class="fa fa-code"></i></a> </div>
-                                    <div class="icon-content">
-                                        <h5 class="dez-tilte text-uppercase">Informations</h5>
-                                        <p>Processus de recrutement et modalités de candidature [...]</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

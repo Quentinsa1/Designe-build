@@ -1,76 +1,79 @@
-<footer class="site-footer style-1">
-    <!-- footer top part -->
-    <div class="footer-top" style="background-image:url(images/background/bg19.jpg);">
+<footer>
         <div class="container">
             <div class="row">
-               <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="widget widget_about">
-                        <h4 class="footer-title">CONTACT</h4>
-                        <div class="widget_getintuch">
-                            <ul>
-                                <li>
-                                    <i class="fas fa-map-marker-alt text-primary"></i>
-                                    Bénin: llot 4007 Fifadji-Houto, Cotonou Bénin
-                                </li>
-                                <li>
-                                    <i class="fa fa-phone text-primary"></i>
-                                    +229 99 53 57 60 /
-                                    (+33) 01 73 44 09 99                                </li>
-                                <li>
-                                    <i class="fa fa-fax text-primary"></i>
-                                    d&b@7elite-group.com
-                                </li>
-                            </ul>
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="footer-title">7Elite & Build</h4>
+                    <p>Leader dans la construction de qualité, nous transformons vos rêves architecturaux en réalités durables avec innovation et excellence.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f" style='color: #d4af37'></i></a>
+                        <a href="#"><i class="fab fa-twitter" style='color: #d4af37'></i></a>
+                        <a href="#"><i class="fab fa-instagram" style='color: #d4af37'></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in" style='color: #d4af37'></i></a>
+                        <a href="#"><i class="fab fa-pinterest" style='color: #d4af37'></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-5 mb-md-0">
+                    <h4 class="footer-title">Liens Rapides</h4>
+                    <div class="footer-links">
+                        <a href="{{ route('website.index')}}">Accueil</a>
+                        <a href="{{ route('website.about')}}">À propos</a>
+                        <a href="{{ route('website.expertise.index')}}">Expertises</a>
+                        <a href="{{ route('website.realisation') }}">Réalisations</a>
+                        <a href="{{ route('website.actualite.index') }}">Actualités</a>
+                        <a href="{{ route('website.contact') }}">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-5 mb-md-0">
+                    <h4 class="footer-title">Services</h4>
+                    <div class="footer-links">
+                        <a href="#">Construction Résidentielle</a>
+                        <a href="#">Architecture Commerciale</a>
+                        <a href="#">Rénovation de Luxe</a>
+                        <a href="#">Design d'Intérieur</a>
+                        <a href="#">Gestion de Projet</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2" style='color: #d4af37'></i>
+                            Cotonou, Sikècodji
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2" style='color: #d4af37'></i>
+                            + 229 99 53 57 60 
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2" style='color: #d4af37'></i>
+                            contact@7elite-build.fr
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-clock me-2" style='color: #d4af37'></i>
+                            Lun-Ven: 9h00 - 18h00
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">&copy; 2023 7Elite & Build. Tous droits réservés.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-links d-inline">
+                            <a href="#">Mentions Légales</a>
+                            <a href="#">Politique de Confidentialité</a>
+                            <a href="#">Conditions d'Utilisation</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-6 ">
-                    <div class="widget widget_services">
-                        <h4 class="footer-title">Nos Liens</h4>
-                        <ul>
-                            <li><a href="index.html">Acceuil</a></li>
-                            <li><a href="about-us.html">A Propos de Nous</a></li>
-                            <li><a href="services.html">Nos Expertises</a></li>
-                            <li><a href="team.html">Actualités</a></li>
-                            <li><a href="blog-grid.html">Carrièress</a></li>
-                            <li><a href="blog-grid.html">FAQ</a></li>
-                        </ul>
-                    </div>
-                </div>
-               <div class="col-lg-3 col-md-6 col-sm-6 ">
-                    <div class="widget widget_services">
-                        <h4 class="footer-title">NOS SERVICES</h4>
-                        <ul>
-                            <li><a href="javascript:void(0);">Bâtiment</a></li>
-                            <li><a href="javascript:void(0);">Ingénierie de conception & d’exécution</a></li>
-                            <li><a href="javascript:void(0);">BIM & SIG</a></li>
-                            <li><a href="javascript:void(0);">Visualisation architecturale & urbanisme</a></li>
-                            <li><a href="javascript:void(0);">Design d’intérieur</a></li>
-                            <li><a href="javascript:void(0);">Suivi de travaux</a></li>
-                        </ul>
-                    </div>
-                </div>
-               <div class="col-lg-3 col-md-6 col-sm-6 ">
-                    <div class="widget widget_services">
-                        <h4 class="footer-title">AUTRES LIENS</h4>
-                        <ul>
-                            <li><a href="javascript:void(0);">FAQ</a></li>
-                            <li><a href="javascript:void(0);">Mission & Vision</a></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
-    </div>
-    <!-- footer bottom part -->
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 text-left">
-                    <span class="copyright-text">Copyright © <span class="current-year">2024</span> <a href="" class="text-primary" target="_blank">7elite Design & Build</a> tous droits réservés.</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>

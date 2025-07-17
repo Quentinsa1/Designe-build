@@ -1,128 +1,158 @@
+{{-- realisations.blade.php --}}
 @extends('partials.template')
+
 @section('content')
-<div class="page-content">
-    <!-- inner page banner -->
-    <div class="dez-bnr-inr overlay-black-middle" style="background-image:url({{ asset('assets/images/background/b2.jpg') }});">
-        <div class="container">
-            <div class="dez-bnr-inr-entry">
-                <h1 class="text-white" style="text-align: center">Nos Réalisations</h1>
-            </div>
+<style>
+    /* Style du hero pour les réalisations */
+    .realisations-hero {
+        background: url('frr.jpg') no-repeat center center;
+        background-size: cover;
+        height: 30vh;
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        padding-top: 80px;
+        text-align: center;
+    }
+
+    .realisations-hero .floating-element {
+        position: absolute;
+        z-index: 1;
+        opacity: 0.5;
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .realisations-hero .cube {
+        width: 80px;
+        height: 80px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        top: 20%;
+        left: 10%;
+        animation-delay: 0s;
+        backdrop-filter: blur(5px);
+    }
+
+    .realisations-hero .sphere {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: rgba(212, 175, 55, 0.1);
+        border: 2px solid rgba(212, 175, 55, 0.2);
+        bottom: 30%;
+        right: 15%;
+        animation-delay: 1s;
+        backdrop-filter: blur(5px);
+    }
+
+    .realisations-hero .pyramid {
+        width: 0;
+        height: 0;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 70px solid rgba(255, 255, 255, 0.1);
+        top: 40%;
+        right: 10%;
+        animation-delay: 2s;
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-15px);
+        }
+    }
+
+    .realisations-hero h1 {
+        font-size: 3rem;
+        color: #fff;
+        z-index: 2;
+        position: relative;
+        font-weight: bold;
+    }
+
+    .realisations-hero p {
+        font-size: 1.2rem;
+        z-index: 2;
+        position: relative;
+        color: #fff;
+        margin-top: 15px;
+    }
+    .realisations-hero .container > .text-start {
+        z-index: 2;
+        position: relative;
+        margin-left: 0;
+        margin-right: auto;
+        padding-left: 15px;
+    }
+
+</style>
+
+<section class="realisations-hero">
+    <div class="floating-element cube"></div>
+    <div class="floating-element sphere"></div>
+    <div class="floating-element pyramid"></div>
+
+    <div class="container">
+        <div class="text-start" style="max-width: 700px;">
+            <h1>Nos Réalisations</h1>
+            <p>Découvrez nos projets et réalisations exceptionnelles</p>
         </div>
     </div>
+</section>
 
-    <div class="breadcrumb-row">
-        <div class="container">
-            <ul class="list-inline">
-                <li><a href="javascript:void(0);">Acceuil</a></li>
-                <li>Nos Réalisations</li>
-            </ul>
-        </div>
-    </div>
-    <!-- Breadcrumb row END -->
-    <div class="content-area">
-        <!-- Left & right section start -->
-        <div class="container">
-            <!-- Gallery -->
-            <div class="site-filters clearfix center  m-b40">
-
-            </div>
-            <div class="clearfix">
-                <ul id="masonry" class="row dez-gallery-listing gallery-grid-4 mfp-gallery">
-                    <li class="home card-container col-lg-6 col-md-6 col-sm-6 col-6">
-                        <div class="dez-box dez-gallery-box">
-                            <div class="dez-thum dez-img-overlay1 dez-img-effect zoom-slow"> <a href="javascript:void(0);"> <img src="{{ asset('assets/images/gallery/pic1.jpg') }}"  alt=""> </a>
-                                <div class="overlay-bx">
-                                    <div class="overlay-icon">
-                                        <a href="javascript:void(0);"> <i class="fa fa-link icon-bx-xs"></i> </a>
-                                        <a href="{{ asset('assets/images/gallery/pic1.jpg') }}" class="mfp-link" title="Tile Come Here"> <i class="far fa-image icon-bx-xs"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="office card-container col-lg-6 col-md-6 col-sm-6 col-6">
-                        <div class="dez-box dez-gallery-box">
-                            <div class="dez-thum dez-img-overlay1 dez-img-effect zoom-slow dez-img-effect zoom"> <a href="javascript:void(0);"> <img src="{{ asset('assets/images/gallery/pic2.jpg') }}"  alt=""> </a>
-                                <div class="overlay-bx">
-                                    <div class="overlay-icon">
-                                        <a href="javascript:void(0);"> <i class="fa fa-link icon-bx-xs"></i> </a>
-                                        <a href="{{ asset('assets/images/gallery/pic2.jpg') }}" class="mfp-link" title="Tile Come Here"> <i class="far fa-image icon-bx-xs"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="card-container col-lg-6 col-md-6 col-sm-6 col-6">
-                        <div class="dez-box dez-gallery-box">
-                            <div class="dez-thum dez-img-overlay1 dez-img-effect zoom-slow"> <a href="javascript:void(0);"> <img src="{{ asset('assets/images/gallery/pic3.jpg') }}"  alt=""> </a>
-                                <div class="overlay-bx">
-                                    <div class="overlay-icon">
-                                        <a href="javascript:void(0);"> <i class="fa fa-link icon-bx-xs"></i> </a>
-                                        <a href="{{ asset('assets/images/gallery/pic3.jpg') }}" class="mfp-link" title="Tile Come Here"> <i class="far fa-image icon-bx-xs"></i> </a> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="commercial children-aid card-container col-lg-6 col-md-6 col-sm-6 col-6">
-                        <div class="dez-box dez-gallery-box">
-                            <div class="dez-thum dez-img-overlay1 dez-img-effect zoom-slow"> <a href="javascript:void(0);"> <img src="{{ asset('assets/images/gallery/pic4.jpg') }}"  alt=""> </a>
-                                <div class="overlay-bx">
-                                    <div class="overlay-icon"> <a href="javascript:void(0);"> <i class="fa fa-link icon-bx-xs"></i> </a> <a  href="{{ asset('assets/images/gallery/pic4.jpg') }}" class="mfp-link" title="Tile Come Here"> <i class="far fa-image icon-bx-xs"></i> </a> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="window card-container col-lg-6 col-md-6 col-sm-6 col-6">
-                        <div class="dez-box dez-gallery-box">
-                            <div class="dez-thum dez-img-overlay1 dez-img-effect zoom-slow"> <a href="javascript:void(0);"> <img src="{{ asset('assets/images/gallery/pic5.jpg') }}"  alt=""> </a>
-                                <div class="overlay-bx">
-                                    <div class="overlay-icon"> <a href="javascript:void(0);"> <i class="fa fa-link icon-bx-xs"></i> </a> <a  href="{{ asset('assets/images/gallery/pic5.jpg') }}" class="mfp-link" title="Tile Come Here"> <i class="far fa-image icon-bx-xs"></i> </a> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="apartment card-container col-lg-6 col-md-6 col-sm-6 col-6">
-                        <div class="dez-box dez-gallery-box">
-                            <div class="dez-thum dez-img-overlay1 dez-img-effect zoom-slow"> <a href="javascript:void(0);"> <img src="{{ asset('assets/images/gallery/pic6.jpg') }}"  alt=""> </a>
-                                <div class="overlay-bx">
-                                    <div class="overlay-icon"> <a href="javascript:void(0);"> <i class="fa fa-link icon-bx-xs"></i> </a> <a  href="{{ asset('assets/images/gallery/pic6.jpg') }}" class="mfp-link" title="Tile Come Here"> <i class="far fa-image icon-bx-xs"></i> </a> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="construction card-container col-lg-6 col-md-6 col-sm-6 col-6">
-                        <div class="dez-box dez-gallery-box">
-                            <div class="dez-thum dez-img-overlay1 dez-img-effect zoom-slow"> <a href="javascript:void(0);"> <img src="{{ asset('assets/images/gallery/pic1.jpg') }}"  alt=""> </a>
-                                <div class="overlay-bx">
-                                    <div class="overlay-icon"> <a href="javascript:void(0);"> <i class="fa fa-link icon-bx-xs"></i> </a> <a href="{{ asset('assets/images/gallery/pic1.jpg') }}" class="mfp-link" title="Tile Come Here"> <i class="far fa-image icon-bx-xs"></i> </a> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="home card-container col-lg-6 col-md-6 col-sm-6 col-6">
-                        <div class="dez-box dez-gallery-box">
-                            <div class="dez-thum dez-img-overlay1 dez-img-effect zoom-slow"> <a href="javascript:void(0);"> <img src="{{ asset('assets/images/gallery/pic2.jpg') }}"  alt=""> </a>
-                                <div class="overlay-bx">
-                                    <div class="overlay-icon"> <a href="javascript:void(0);"> <i class="fa fa-link icon-bx-xs"></i> </a> <a  href="{{ asset('assets/images/gallery/pic2.jpg') }}" class="mfp-link" title="Tile Come Here"> <i class="far fa-image icon-bx-xs"></i> </a> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <!-- Gallery END -->
-            <!-- Pagination start -->
-            <div class="pagination-bx  clearfix ">
-                <ul class="pagination">
-                    <li class="previous"><a href="javascript:void(0);"><i class="fa fa-angle-double-left"></i></a></li>
-                    <li class="active"><a href="javascript:void(0);">1</a></li>
-                    <li><a href="javascript:void(0);">2</a></li>
-                    <li><a href="javascript:void(0);">3</a></li>
-                    <li class="next"><a href="javascript:void(0);"><i class="fa fa-angle-double-right"></i></a></li>
-                </ul>
-            </div>
-            <!-- Pagination END -->
-        </div>
+<div class="breadcrumb-row bg-light py-2">
+    <div class="container">
+        <ul class="breadcrumb text-dark m-0 px-0 bg-transparent">
+            <li class="breadcrumb-item"><a href="{{ route('website.index') }}">Accueil</a></li>
+            <li class="breadcrumb-item active">Réalisations</li>
+        </ul>
     </div>
 </div>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row g-4">
+            @foreach($realisations as $realisation)
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow border-0">
+                        <a href="">
+                            <img src="{{ asset('storage/' . $realisation->image) }}" class="card-img-top" alt="{{ $realisation->titre }}">
+                        </a>
+                        <div class="card-body d-flex flex-column">
+                            <small class="text-muted mb-2">
+                                <i class="fa fa-calendar-alt me-1"></i>
+                                {{ $realisation->created_at->format('d M Y') }} &nbsp;|&nbsp;
+                                <i class="fa fa-tag me-1"></i>
+                                {{ $realisation->categorie->nom ?? 'Non catégorisé' }}
+                            </small>
+                            <h5 class="card-title mb-3">
+                                <a href="" class="text-dark text-decoration-none">
+                                    {{ $realisation->titre }}
+                                </a>
+                            </h5>
+                            <div class="mt-auto">
+                                <a href="" class="btn btn-outline-primary rounded-pill btn-sm">
+                                    Voir plus <i class="fa fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+
+        @if ($realisations->hasPages())
+            <div class="d-flex justify-content-center mt-5">
+                {{ $realisations->links('vendor.pagination.custom') }}
+            </div>
+        @endif
+    </div>
+</section>
 @endsection

@@ -151,20 +151,20 @@ blockquote,
 .dez-team-1 .team-info:after,
 .dez-team-1.left .team-info:before,
 .dez-team-1.right .team-info:before{
-	border-color: #002169 !important;
+	border-color: #fac909 !important;
 }
 /*=====================
 	Secondery bg color
  =====================*/
 .bg-secondry {
-    background-color: #C8B281;
+    background-color: #002169;
 }
 
 /*=====================
 	Secondery text color
  =====================*/
 .text-secondry {
-    color: #2d3239;
+    color: #002169;
 }
 
 .text-primary{
