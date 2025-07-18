@@ -37,19 +37,21 @@ class WebsiteController extends Controller
     public function showExpertise($slug)
     {
         $subcategory = SousCategorieExpertise::with(['categorie' => function($query) {
-                              $query->active();
-                          }])
-                          ->where('slug', $slug)
-                          ->whereHas('categorie') // Garantit qu'une catégorie existe
-                          ->active()
-                          ->firstOrFail();
+            $query->active()->with(['sousCategories' => function($q) {
+                $q->active()->orderBy('ordre');
+            }]);
+        }])
+        ->where('slug', $slug)
+        ->whereHas('categorie') 
+        ->active()
+        ->firstOrFail();
     
         return view('website.expertise.show', compact('subcategory'));
     }
     
+    
     public function realisation()
     {
-        // Retirez le with('categorie') et paginez simplement
         $realisations = Realisation::orderBy('created_at', 'desc')->paginate(6);
         
         return view('website.realisation.index', compact('realisations'));
